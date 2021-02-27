@@ -13,7 +13,7 @@ lazy val root = (project in file("."))
     name := "barista-client-core",
     organization := "com.vsthost.rnd",
     scalaVersion := "2.12.6",
-    version := "0.0.1-SNAPSHOT",
+    version := "0.0.1",
 
     // Scalac Options:
     scalacOptions += "-deprecation",
