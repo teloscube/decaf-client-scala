@@ -4,7 +4,6 @@ val VersionCatsEffect = "1.0.0-RC3"
 val VersionCirce      = "0.9.3"
 val VersionSTTP       = "1.3.0"
 
-
 // Configure the root project:
 lazy val root = (project in file("."))
   .enablePlugins(BuildInfoPlugin)
@@ -12,7 +11,7 @@ lazy val root = (project in file("."))
     // Top-level Settings:
     name := "barista-client-core",
     organization := "com.vsthost.rnd",
-    scalaVersion := "2.12.6",
+    scalaVersion := "2.12.13",
     version := "0.0.2-SNAPSHOT",
 
     // Scalac Options:
