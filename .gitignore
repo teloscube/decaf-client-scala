@@ -1,2 +1,17 @@
-target/
+## SBT and Scala related:
+.ammonite/
+.bloop/
+.bsp/
+.cache
+.history
+.lib/
+.metals/
+dist/*
+lib_managed/
+metals.sbt
+project/boot/
+project/plugins/project/
 project/target/
+src_managed/
+target/
+tmp/
