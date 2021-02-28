@@ -9,8 +9,8 @@ lazy val root = (project in file("."))
   .enablePlugins(BuildInfoPlugin)
   .settings(
     // Top-level Settings:
-    name := "barista-client-core",
-    organization := "com.vsthost.rnd",
+    name := "decaf-client-scala-core",
+    organization := "com.teloscube",
     scalaVersion := "2.12.13",
     version := "0.0.2-SNAPSHOT",
 
