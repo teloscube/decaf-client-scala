@@ -1,8 +1,8 @@
 // Define versions for libraries:
-val VersionCats       = "1.2.0"
-val VersionCatsEffect = "1.0.0-RC3"
-val VersionCirce      = "0.9.3"
-val VersionSTTP       = "1.3.0"
+val VersionCats       = "1.4.0"
+val VersionCatsEffect = "1.0.0"
+val VersionCirce      = "0.10.0"
+val VersionSTTP       = "1.3.5"
 
 // Configure the root project:
 lazy val root = (project in file("."))
