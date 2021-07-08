@@ -1,18 +1,17 @@
 // Define versions for libraries:
-val VersionCats       = "1.2.0"
-val VersionCatsEffect = "1.0.0-RC3"
-val VersionCirce      = "0.9.3"
-val VersionSTTP       = "1.3.0"
-
+val VersionCats       = "1.4.0"
+val VersionCatsEffect = "1.0.0"
+val VersionCirce      = "0.10.0"
+val VersionSTTP       = "1.3.5"
 
 // Configure the root project:
 lazy val root = (project in file("."))
   .enablePlugins(BuildInfoPlugin)
   .settings(
     // Top-level Settings:
-    name := "barista-client-core",
-    organization := "com.vsthost.rnd",
-    scalaVersion := "2.12.6",
+    name := "decaf-client-scala-core",
+    organization := "com.teloscube",
+    scalaVersion := "2.12.13",
     version := "0.0.2-SNAPSHOT",
 
     // Scalac Options:
