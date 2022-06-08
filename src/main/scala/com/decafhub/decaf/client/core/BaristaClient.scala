@@ -1,4 +1,4 @@
-package com.vsthost.rnd.barista.client.core
+package com.decafhub.decaf.client.core
 
 
 import cats.effect.{IO, Sync}

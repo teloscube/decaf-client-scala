@@ -10,7 +10,7 @@ lazy val root = (project in file("."))
   .settings(
     // Top-level Settings:
     name := "decaf-client-scala-core",
-    organization := "com.teloscube",
+    organization := "com.decafhub",
     scalaVersion := "2.12.13",
     version := "0.0.2-SNAPSHOT",
 
@@ -19,7 +19,7 @@ lazy val root = (project in file("."))
 
     // BuildInfo Settings:
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
-    buildInfoPackage := "com.vsthost.rnd.barista.client.core",
+    buildInfoPackage := "com.decafhub.decaf.client.buildinfo",
 
     // Libraries:
     libraryDependencies ++= Seq(
