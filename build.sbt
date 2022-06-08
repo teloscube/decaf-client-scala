@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
     // Top-level Settings:
     name := "decaf-client-scala",
     organization := "com.decafhub",
-    scalaVersion := "2.12.13",
+    scalaVersion := "2.12.15",
     version := "0.0.2-SNAPSHOT",
 
     // Scalac Options:
