@@ -8,20 +8,49 @@ val VersionSTTP       = "1.3.5"
 lazy val root = (project in file("."))
   .enablePlugins(BuildInfoPlugin)
   .settings(
-    // Top-level Settings:
     name := "decaf-client-scala",
-    organization := "com.decafhub",
-    scalaVersion := "2.12.15",
     version := "0.0.2-SNAPSHOT",
-
-    // Scalac Options:
+    description := "DECAF API Client for Scala.",
+    homepage := Some(
+      url(
+        "https://github.com/teloscube/decaf-client-scala",
+      ),
+    ),
+    licenses := List(
+      "Apache 2" -> new URL(
+        "http://www.apache.org/licenses/LICENSE-2.0.txt",
+      ),
+    ),
+    organization := "com.decafhub",
+    organizationName := "decafhub",
+    organizationHomepage := Some(
+      url("https://decafhub.com"),
+    ),
+    scmInfo := Some(
+      ScmInfo(
+        url(
+          "https://github.com/teloscube/decaf-client-scala",
+        ),
+        "scm:git@github.com:teloscube/decaf-client-scala.git",
+      ),
+    ),
+    developers := List(
+      Developer(
+        id = "vst",
+        name = "Vehbi Sinan Tunalioglu",
+        email = "vst@vsthost.com",
+        url = url("https://github.com/vst"),
+      ),
+    ),
+    scalaVersion := "2.12.15",
     scalacOptions += "-deprecation",
-
-    // BuildInfo Settings:
-    buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
+    buildInfoKeys := Seq[BuildInfoKey](
+      name,
+      version,
+      scalaVersion,
+      sbtVersion,
+    ),
     buildInfoPackage := "com.decafhub.decaf.client.buildinfo",
-
-    // Libraries:
     libraryDependencies ++= Seq(
       "org.typelevel"         %% "cats-core"     % VersionCats,
       "org.typelevel"         %% "cats-effect"   % VersionCatsEffect,
@@ -29,5 +58,18 @@ lazy val root = (project in file("."))
       "io.circe"              %% "circe-generic" % VersionCirce,
       "com.softwaremill.sttp" %% "core"          % VersionSTTP,
       "com.softwaremill.sttp" %% "circe"         % VersionSTTP,
-    )
+    ),
+    pomIncludeRepository := { _ => false },
+    publishTo := {
+      val nexus = "https://s01.oss.sonatype.org/"
+      if (isSnapshot.value)
+        Some(
+          "snapshots" at nexus + "content/repositories/snapshots",
+        )
+      else
+        Some(
+          "releases" at nexus + "service/local/staging/deploy/maven2",
+        )
+    },
+    publishMavenStyle := true,
   )
